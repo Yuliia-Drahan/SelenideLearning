@@ -18,9 +18,6 @@ public class HeaderBasket extends ElementsContainer {
     @FindBy(xpath = ".//a[text()='Оформить заказ']")
     public SelenideElement checkOutButton;
 
-//    @FindBy(xpath = ".//i[@class='icon-close']")
-//    public SelenideElement closeBasketAll;
-
     @FindBy(xpath = ".//div[@class='header-tooltip__cards-item__body']")
     public ElementsCollection basketItems;
 

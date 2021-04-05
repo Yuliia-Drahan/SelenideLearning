@@ -1,17 +1,30 @@
 package com.foxtrot.entities;
 
-import com.foxtrot.pages.BasketPage;
+import com.codeborne.selenide.SelenideElement;
+import com.foxtrot.pages.BasePage;
+import org.openqa.selenium.support.FindBy;
 
-import static com.codeborne.selenide.Selenide.$x;
+public class PhoneEntity extends BasePage {
 
-public class PhoneEntity {
+    @FindBy(xpath = "//div[@class='product-box__main-buy ']")
+    private SelenideElement mainBuyPhoneButton;
 
+    @FindBy(xpath = "//div[@class='product-box__main-buyloans_wrapper']")
+    private SelenideElement mainBuyPhoneByLoans;
 
-    private String buyPhone = "//div[@class='button buy-button product-box__main-buy__button product-buy-button' and @data-product-title='%s']";
+    @FindBy(xpath = "//div[@class='button buy-button  product-buy-button']")
+    private SelenideElement headerBuyPhoneButton;
 
-    public BasketPage buyPhone(String buyPhoneTitle){
-        $x(String.format(buyPhone,buyPhoneTitle)).click();
-        return new BasketPage();
+    public void buyPhoneMain () {
+        mainBuyPhoneButton.click();
+    }
+
+    public void buyPhoneByLoans (){
+        mainBuyPhoneByLoans.click();
+    }
+
+    public void buyPhoneHeader (){
+        headerBuyPhoneButton.click();
     }
 }
 

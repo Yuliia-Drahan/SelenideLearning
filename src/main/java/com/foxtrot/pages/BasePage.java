@@ -12,7 +12,7 @@ public class BasePage {
     @FindBy(xpath = ".//div[@class='header-search evinent-search-container']")
     public HeaderSearch headerSearch;
 
-    @FindBy(xpath = ".//div[@class='header-tooltip__cards smooth-scroll']")
+    @FindBy(xpath = ".//div[@class='tooltip slot tooltip_active']")
     public HeaderBasket headerBasket;
 
     @FindBy(xpath = ".//ul[@class='header__categories-items smooth-scroll']")
